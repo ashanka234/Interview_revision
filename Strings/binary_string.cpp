@@ -15,7 +15,7 @@ int main()
         cin >> str;
         for(int i=0; i<n; i++)
         {
-            if(str[i] == '1');
+            if(str[i] == '1')
                 cnt++;
         }
 
