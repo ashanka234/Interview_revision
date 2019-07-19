@@ -8,7 +8,7 @@ struct Node
     Node *next;
 };
 
-void push(Node **head, int d)
+void push_back(Node **head, int d)
 {
     Node *newNode = new Node;
     newNode->data = d;
@@ -19,8 +19,12 @@ void push(Node **head, int d)
         *head = newNode;
         return;
     }
-    newNode->next = *head;
-    *head = newNode;
+    
+    Node *curr = *head;
+    while(curr->next)
+        curr = curr->next;
+    
+    curr->next = newNode;
 }
 
 void print_list(Node *head)
@@ -74,14 +78,14 @@ int main()
     {
         int n;
         cin >> n;
-        push(&head1, n);
+        push_back(&head1, n);
     }
 
     while(n2--)
     {
         int n;
         cin >> n;
-        push(&head2, n);
+        push_back(&head2, n);
     }
     //print_list(head1);
 
