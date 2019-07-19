@@ -1,3 +1,0 @@
-  // reverse(&head);
-
-    // print(head);
