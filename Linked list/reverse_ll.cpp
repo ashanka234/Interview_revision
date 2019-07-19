@@ -13,6 +13,7 @@ void insert(Node **head, int d)
     {
         Node *new_node = new Node;
         new_node->data = d;
+        new_node->next = NULL;
         *head = new_node;
         return;
     }
@@ -70,11 +71,11 @@ int main()
     insert(&head, 3);
     insert(&head, 4);
     
-    //print(head);
+    print(head);
 
-    // reverse(&head);
+    reverse(&head);
 
-    // print(head);
+    print(head);
 
     return (0);
 }
