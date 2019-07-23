@@ -101,7 +101,7 @@ int main()
         cin >> arr[i];
     }
 
-    cout << "Enter tree in level order:\n";
+    //cout << "Enter tree in level order:\n";
     Node *root = NULL;
     root = buildTree(arr, root, 0, n);      //enter -1 for NULL 
     //root = build();
