@@ -21,7 +21,7 @@ Node *newNode(int d)
 int height(Node *root)
 {
     if(!root)
-        return 0;       //height of root is 0
+        return 0;       //height of empty tree is 0
 
     int lheight = height(root->left);
     int rheight = height(root->right);
@@ -39,5 +39,5 @@ int main()
     cout << height(root) << endl;
 
     return (0);
-    
+
 }
